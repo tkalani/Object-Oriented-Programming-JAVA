@@ -1,0 +1,77 @@
+A.
+    'Final' is a non-access modifier applicable only to a variable, a method, or a class. When any variable is declared as 'final' its value can't be modified essentially a constant.
+
+    -- If 'final' variable is a reference, this means variable can't be rebound to reference another object, but the internal state of the object pointed by the reference varible can be changed. For objects, however, the variable stores not the object, but a reference to the object. In other words, adding the final keyword only limits you from reassigning the reference that is stored by the variable.
+    -- 'final' can be used at the class level and at the method level as well. 
+        -- When used at the class level, it means that the class cannot be extended.
+        -- When used at the method level, it means that the method cannot be overridden.
+    
+    -- java.lang is of 'final' access-modifier class. 'final' keyword here is used at class level. It means class cannot be extended. 
+        Ex. java.lang.String
+
+B.
+    -- JDK
+        -- Java Development Kit
+        -- JDK is an implementation of any one of the below given Java Platforms :
+            -- Standard Edition Java Platform
+            -- Enterprise Edition Java Platform
+            -- Micro Edition Java Platform
+        -- Developing Java Applications and Applets.
+        -- It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc) and other tools needed in Java development.
+
+    -- JRE
+        -- Java Runtime Environment
+        -- Also known as Java Runtime
+        -- Has set of software tools which provide runtime env.
+        -- It physically exists and contains libraries ( + other_files ) which JVM uses at runtime.
+        -- Provides minimum requirements for executing a JAVA applocation.
+        -- It consists of the Java Virtual Machine (JVM), core classes, and supporting files.
+
+    -- JVM
+        -- Java Virtual Machine
+        -- Abstract Machine
+        -- Does not physically exist.
+        -- Specification that provides a runtime environment in which Java bytecode can be executed.
+        -- It can also run those programs which are written in other languages and compiled to Java bytecode.
+        -- JVMs are available for many hardware and software platforms. JVM, JRE, and JDK are platform dependent because the configuration of each OS is different from each other.
+        -- Java is platform independent.
+        -- A specification where working of Java Virtual Machine is specified. But implementation provider is independent to choose the algorithm. Its implementation has been provided by Sun and other companies.
+        -- An implementation is a computer program that meets the requirements of the JVM specification.
+        -- Runtime Instance Whenever you write java command on the command prompt to run the java class, an instance of JVM is created.
+
+C.
+    -- Essential part of JRE, that is responsible for run-time optimization.
+    -- In the Java programming language and environment, a just-in-time (JIT) compiler is a program that turns Java bytecode (a program that contains instructions that must be interpreted) into instructions that can be sent directly to the processor.
+    -- Compiles bytecode into platform-specific executable code that is immediately executed.
+    -- In a JAVA program, source language statements are compiled by java compiler to 'bytecode' rather than hardware specific code.
+    -- In tha past, most programs written in any programming language had to recompiled and rewritten for each harware platform.
+    -- With JAVA,
+        -- have to write and compile program only once.
+        -- JAVA on any platform will interpret the compiled bytecode into instructions understandable to the processor.
+    -- Using JIT
+        -- particular system platform complies bytecode into particular system code. ( had been the program already been compiled initially on that platform).
+        -- Once code has been compiled by JIT, it will run a lot faster.
+    -- Comes with a virtual machine and is used optionally.
+    -- Optimizations performed by JIT compilers are data-analysis, reduction of memory accesses by register allocation, translation from stack operations to register operations, elimination of common sub-expressions etc.
+
+D. 
+    -- Sometimes there is a need to create an exact but separate copy of an existing object so that subsequent changes to the copy should not alter the original or vice versa. 
+    -- Copy Constructor in java class is a special type of constructor that takes same class as argument.
+    -- Used to provide a copy of the specified object.
+    -- Easy alternative to Java cloning mechanism.
+    -- Copy constructor is helpful when we want to copy an object that is heavy to instantiate. 
+        -- While writing copy constructor it’s very important to perform deep copy so that both the objects are detached. 
+        -- However in some cases where you don’t mind the change in object data, then you can also go for shallow copy.
+
+E.
+    -- ERROR : 
+            Test t = new Test();
+                ^
+            required: int,int
+            found: no arguments
+            reason: actual and formal argument lists differ in length
+            1 error
+
+    -- Reason 
+        -- Class 'Test' only has a parameterized constructor. There is no default constructor.
+        -- Therefore, two parameters must be passed in order to create an object of 'Test' class. 
